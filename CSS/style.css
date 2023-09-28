@@ -1,18 +1,23 @@
-/* variables declared here - these are the colors for our pages, as well as the font stacks and sizes. */
+/* Variables declared here - these are the colors for our pages, as well as the font stacks and sizes. */
+
 :root {
-    --black: #171321;
-    --dkblue: #0d314b;
-    --plum: #4b0d49;
-    --hotmag: #ff17e4;
-    --magenta: #e310cb;
-    --aqua: #86fbfb;
+    --black: #0D0D0D;
     --white: #f7f8fa;
+    --braun: #8C2703;
+    --korange: #F24405;
+    --lorange: #F2620F;
+    --beige: #FEC58A;
+    --aqua: #86fbfb;
+   
+ 
     --font-size: 1.3rem;
     --mono: "Oxygen mono", monospace;
     --sans: Oxygen, sans-serif;
 }
 
+
 /* border box model: https://css-tricks.com/box-sizing/ */
+
 html {
     box-sizing: border-box;
 }
@@ -23,7 +28,9 @@ html {
     box-sizing: inherit;
 }
 
+
 /* generic styles for the page */
+
 body {
     padding: 0;
     margin: 0;
@@ -40,30 +47,38 @@ h3 {
 }
 
 a {
-    color: var(--magenta);
+    color: var(--lorange);
 }
 
 a:hover {
-    color: var(--hotmag);
+    color: var(--korange);
     text-decoration: none;
 }
+img {
+  width: 100%;
+}
 
-/* Hintergrund Farb unterschied */
-.section-plum {
-    background-color: var(--plum);
+
+/* background color divs */
+.section-blue {
+    background-color: var(--beige);
 }
+
 .gradient1 {
-    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
-    height: 2px;
+    background: linear-gradient(145deg, rgba(13,13,13,1) 0%, rgba(242,68,5,1) 80%);
+    height: 3px;
 }
-.gradient2{
-    background: linear-gradient(90deg, rgba(252,176,69,1) 0%, rgba(253,29,29,1) 50%, rgba(131,58,180,1) 100%);
-    height: 2px;
+.gradient3 {
+    background: linear-gradient(145deg, rgba(242,68,5,1) 0%, rgba(13,13,13,1) 80%);
+    height: 3px;
 }
+
+
 /* intro styles */
+
 #intro {
     padding: 4rem 1rem 10rem 1rem;
-    /* TRBL einteilung bei padding */
+    padding-bottom: 10rem;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -81,7 +96,7 @@ a:hover {
 .name span {
     font-family: var(--sans);
     font-size: 4rem;
-    color: var(--aqua);
+    color: var(--korange);
     display: block;
     font-weight: 300;
 }
@@ -90,24 +105,27 @@ a:hover {
     font-size: 4rem;
 }
 
+
 /* contact section */
 
 #contact {
     width: 400px;
     text-align: center;
     margin: 0 auto;
-    padding: 3rem 0;
+    padding: 4rem 0;
 }
 
 #contact p:last-child {
     margin-top: 3rem;
 }
 
+
 /* navigation */
+
 nav {
     font-family: var(--mono);
     font-size: 80%;
-    padding: 1rem;
+    padding: 4rem 1rem;
 }
 
 nav h1 a {
@@ -132,12 +150,12 @@ nav li:first-child {
 
 nav [class*="fa-"] {
     font-size: 150%;
-    color: var(--aqua);
+    color: var(--korange);
 }
 
 nav h1 [class*="fa-"] {
     font-size: 100%;
-    color: var(--aqua);
+    color: var(--korange);
 }
 
 nav a {
@@ -148,26 +166,114 @@ nav a {
 
 nav a:hover,
 nav [class*="fa-"]:hover {
-    color: var(--magenta);
+    color: var(--lorange);
 }
 
 .button {
-    background-color: var(--magenta);
+    background-color: var(--korange);
     color: white;
     padding: 0.5rem;
     border-radius: 5px;
-    font-family: var(--mono);
     text-decoration: none;
+    font-family: var(--mono);
 }
 
 .button:hover {
     color: white;
-    background-color: var(--hotmag);
+    background-color: var(--lorange);
 }
 
+/* projects section */
+#projects {
+  padding: 4rem 1rem;
+  color: var(--black);
+}
+#projects h2 {
+    font-size: 2.5rem;
+    margin-bottom: calc(2.5rem * 1.5);
+}
+#projects h3 {
+    color: var(--lorange);
+}
+
+#projects h4 {
+  font-size: 1rem;
+  font-family: var(--mono);
+  margin: 0;
+}
+.blackbox {
+    padding: 1rem;
+    border-radius: 10px;
+    color: white;
+    background-color: var(--black);
+    font-size: 1rem;
+    line-height: 1.5;
+}
+#projects ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    gap: 1rem;
+    font-size: 1rem;
+}
+#projects img {
+    margin: 2rem 0 4rem 0;
+    padding: 1rem;
+    border-left: 1px solid var(--korange);
+    border-top: 1px solid var(--korange);
+    border-radius: 25px;
+}
+/* uebermich section */
+#uebermich {
+    padding: 4rem 1rem;
+    color: var(--black);
+  }
+  #uebermich h2 {
+      font-size: 2.5rem;
+      margin-bottom: calc(2.5rem * 1.5);
+  }
+  #uebermich h3 {
+      color: var(--lorange);
+  }
+  
+  #uebermich h4 {
+    font-size: 1rem;
+    font-family: var(--mono);
+    margin: 0;
+  }
+  .blackbox {
+      padding: 1rem;
+      border-radius: 10px;
+      color: white;
+      background-color: var(--black);
+      font-size: 1rem;
+      line-height: 1.5;
+  }
+  #uebermich ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: flex-start;
+      gap: 1rem;
+      font-size: 1rem;
+  }
+  #uebermich img {
+      margin: 2rem 0 4rem 0;
+      padding: 1rem;
+      border-left: 1px solid var(--korange);
+      border-top: 1px solid var(--korange);
+      border-radius: 25px;
+  }
 /* footer section */
+
 footer {
     text-align: center;
+    padding: 4rem 0;
 }
 
 footer ul {
@@ -180,13 +286,58 @@ footer ul {
     gap: 3rem;
     font-size: 3rem;
 }
-
+@media (min-width: 800px) {
+  article {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+  }
+  #projects img {
+    grid-column: 1/6;
+    grid-row: 1/2;
+  }
+  .text {
+    grid-column: 5/11;
+    grid-row: 1/2;
+    order: 2;
+    text-align: right;
+  }
+  #projects ul {
+    justify-content: flex-end;
+  }
+  #projects .reverse .text {
+    grid-column: 1/7;
+    order: 2;
+    text-align: left;
+  }
+  #projects .reverse img {
+    grid-column: 6/11;
+    grid-row: 1/2;
+  }
+  #projects .reverse ul {
+    justify-content: flex-start;
+  }
+  #uebermich ul {
+    justify-content: flex-end;
+  }
+  #uebermich .reverse .text {
+    grid-column: 1/7;
+    order: 2;
+    text-align: left;
+  }
+  #uebermich .reverse img {
+    grid-column: 6/11;
+    grid-row: 1/2;
+  }
+  #uebermich .reverse ul {
+    justify-content: flex-start;
+  }
+  
+}
 @media (min-width: 850px) {
     nav {
         max-width: 1200px;
         margin: 0 auto;
     }
-
     nav li:first-child {
         flex-basis: auto;
         text-align: left;
