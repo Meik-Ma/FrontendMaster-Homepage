@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Franguinho de Albufeira</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url("img/background.jpg");
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        header {
+            background-color: rgba(235, 235, 235, 0.114);
+            color: rgba(221, 107, 31, 0.8);
+            padding: 1em 0;
+            text-align: center;
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header img {
+            height: 50px;
+            margin-left: 20px;
+        }
+
+        header h1 {
+            flex-grow: 1;
+            text-align: center;
+            margin: 0;
+        }
+
+        .language-selector {
+            margin-right: 20px;
+        }
+
+        .language-selector button {
+            background-color: rgba(235, 235, 235, 0.114);
+            border: none;
+            padding: 0.9em;
+            cursor: pointer;
+            margin-left: 5px;
+        }
+
+        .language-selector img {
+            width: 40px;
+            height: 30px;
+            vertical-align: middle;
+        }
+
+        nav {
+            margin: 0;
+            padding: 1em 0;
+            text-align: center;
+            background-color: rgba(221, 107, 31, 0.8);
+        }
+
+        nav a {
+            color: #fff;
+            margin: 0 1em;
+            text-decoration: none;
+        }
+
+        .content {
+            padding: 2em;
+            background-color: rgba(255, 255, 255, 0.8);
+            margin: 1em;
+        }
+
+        .gallery {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            overflow: hidden;
+            height: 450px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: none;
+        }
+
+        .gallery img.active {
+            display: block;
+        }
+
+        .social-links {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #444;
+            font-size: 1.5em;
+        }
+
+        .social-links img {
+            width: 30px;
+            height: 30px;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="img/background.jpg" alt="Restaurant Logo">
+        <h1 id="restaurant-name">Restaurant Franguinho de Albufeira</h1>
+        <div class="language-selector">
+            <button onclick="changeLanguage('pt')">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_Portugal.svg" alt="Português">
+            </button>
+            <button onclick="changeLanguage('en')">
+                <img src="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg" alt="English">
+            </button>
+            <button onclick="changeLanguage('fr')">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Flag_of_France.svg" alt="Français">
+            </button>
+            <button onclick="changeLanguage('de')">
+                <img src="https://upload.wikimedia.org/wikipedia/en/b/ba/Flag_of_Germany.svg" alt="Deutsch">
+            </button>
+        </div>
+    </header>
+    <nav>
+        <a href="#home" id="nav-home">Startseite</a>
+        <a href="#menu" id="nav-menu">Speisekarte</a>
+        <a href="#contact" id="nav-contact">Kontakt</a>
+    </nav>
+    <div class="content">
+        <section id="home">
+            <h2 id="section-home">Willkommen</h2>
+            <p id="home-text">Willkommen im Franguinho de Albufeira. Wir bieten eine köstliche Auswahl an Hühnerspeisen,
+                die mit Liebe und den frischesten Zutaten zubereitet werden. Ob gegrillt, gebraten oder als leckeres
+                Sandwich – bei uns findet jeder Hühnerliebhaber sein Lieblingsgericht.</p>
+        </section>
+        <div class="gallery">
+            <img src="https://lh3.googleusercontent.com/p/AF1QipOcDBvVUQvgoqopcMDzQYr66g6u-F817lzN45y1=s1360-w1360-h1020-rw"
+                alt="Bild 1" class="active">
+            <img src="https://lh3.googleusercontent.com/p/AF1QipNsxvFYdqLVmilS6Tzb7ceTsLfnlr7hx0x_7wmS=s1360-w1360-h1020-rw"
+                alt="Bild 2">
+            <img src="https://lh3.googleusercontent.com/p/AF1QipOjjyXeo2J9lRWRQ6on1Qp19jbLNQNJC2JivA0h=s1360-w1360-h1020-rw"
+                alt="Bild 3">
+            <img src="https://lh3.googleusercontent.com/p/AF1QipP1vFfLR0-EeLjaGLN6g2wNeioRtTePCpZCfmLV=s1360-w1360-h1020-rw"
+                alt="Bild 3">
+        </div>
+
+        <section id="menu">
+            <h2 id="section-menu">Speisekarte</h2>
+            <p id="menu-text">Unsere Speisekarte bietet eine Vielfalt an Hühnerspezialitäten: saftige Hähnchenbrust,
+                knusprige Hühnerflügel, würzige Hähnchenschenkel und vieles mehr. Probieren Sie unsere berühmten
+                BBQ-Hähnchenflügel oder das klassische Hähnchensandwich, begleitet von unseren hausgemachten Beilagen.
+            </p>
+        </section>
+        <section id="Speisen">
+
+
+
+
+
+        </section>
+        <section id="contact">
+            <h2 id="section-contact">Kontakt</h2>
+            <p id="contact-text">Kontaktieren Sie uns für Reservierungen und weitere Informationen. Wir freuen uns
+                darauf, Sie in unserem Restaurant begrüßen zu dürfen und Ihnen ein unvergessliches Hühnererlebnis zu
+                bieten.</p>
+            <p id="contact-text">Posto BP, Av. dos Descobrimentos, 8200-260 Albufeira, Portugal</p>
+        </section>
+        <div class="social-links">
+            <a href="https://www.facebook.com/franguinho.dealbufeira.9" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
+                    alt="Facebook">
+            </a>
+            <a href="https://www.google.com/search?q=Restaurante+Franguinho+de+Albufeira&client=opera-gx&sca_esv=9a83bf99618973ac&sca_upv=1&udm=1&biw=1879&bih=980&sxsrf=ADLYWILCvQ3SJXOBZwom4VrLIN__YgkeqQ%3A1717665952116&ei=oIBhZujUBprh7_UPx_S9mA4&ved=0ahUKEwjopKyn1MaGAxWa8LsIHUd6D-MQ4dUDCBE&uact=5&oq=Restaurante+Franguinho+de+Albufeira&gs_lp=Egxnd3Mtd2l6LXNlcnAiI1Jlc3RhdXJhbnRlIEZyYW5ndWluaG8gZGUgQWxidWZlaXJhMgUQABiABDIGEAAYFhgeMggQABiABBiiBDIIEAAYgAQYogQyCBAAGIAEGKIEMggQABiABBiiBDIIEAAYgAQYogRIiyZQhxhYhxhwAXgAkAEAmAGmAaABpgGqAQMwLjG4AQPIAQD4AQH4AQKYAgKgArIBqAIDwgIHECMYJxjqApgDBpIHAzEuMaAH0QQ&sclient=gws-wiz-serp#vhid=/g/11bx4ctg54&vssid=rllrl"
+                target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/IOS_Google_icon.png/640px-IOS_Google_icon.png"
+                    alt="Google Reviews">
+            </a>
+        </div>
+    </div>
+    <script>
+        const translations = {
+            "de": {
+                "restaurant-name": "Franguinho de Albufeira",
+                "nav-home": "Startseite",
+                "nav-menu": "Speisekarte",
+                "nav-contact": "Kontakt",
+                "section-home": "Willkommen",
+                "home-text": "Willkommen im Franguinho de Albufeira. Wir bieten eine köstliche Auswahl an Speisen, die mit Liebe und den frischesten Zutaten zubereitet werden. Unsere Speisekarte umfasst eine Vielzahl von Vorspeisen, Fleischgerichten, Beilagen und Desserts. Ergänzen Sie Ihr Essen mit einer Auswahl an Rot-, Weiß-, und Roséweinen sowie erfrischenden Getränken und Bieren. Wir freuen uns darauf, Sie in unserem Restaurant begrüßen zu dürfen und Ihnen ein unvergessliches kulinarisches Erlebnis zu bieten.",
+                "section-menu": "Speisekarte",
+                "menu-text": "",
+                "menu": [
+                    {
+                        "Title": "Vorspeißen",
+
+                        "Speisen": [
+                            { "Name": "Brot (pro Person) - 0,80 €" },
+                            { "Name": "Butter - 0,80 €" },
+                            { "Name": "Gekochte Garnelen (Portion) - 12,00 €" },
+                            { "Name": "Tagessuppe - 2,60 €" }]
+                    },
+                    {
+                        "Title": "Fleisch",
+                        "Speisen": [
+                            { "Name": "½ Gegrilltes Hähnchen (mit oder ohne Piri-Piri) - 8,00 €" },
+                            { "Name": "Gegrilltes Hähnchen (mit oder ohne Piri-Piri) - 16,00 €" },
+                            { "Name": "Gegrilltes Schwarzes Schweinefilet (Lagartinhos) - 16,00 €" },
+                            { "Name": "Gegrilltes Rindersteak - 18,00 €" },
+                            { "Name": "Kalbskotelett - 24,00 €" },]
+
+
+                    },
+                    {
+                        "Title": "Beilagen",
+                        "Speisen": [
+                            { "Name": "Pommes Frites | EXTRA Klein - 3,40 €" },
+                            { "Name": "Pommes Frites | EXTRA Groß - 4,80 €" },
+
+                            { "Name": "Reis - 2,20 €" },
+
+                            { "Name": "Tomatensalat Klein - 3,00 €" },
+                            { "Name": "Tomatensalat Mittel - 4,50 €" },
+                            { "Name": "Tomatensalat Groß - 5,50 €" }]
+
+
+                    },
+                    {
+                        "Title": "Desserts",
+                        "Speisen": [
+                            { "Name": "Waffelkuchen - 4,20 €" },
+                            { "Name": "Süßer Milchreis - 3,30 €" },
+                            { "Name": "Kondensmilch-Dessert - 3,30 €" },
+                            { "Name": "Schokoladenmousse - 3,30 €" },
+                            { "Name": "Sahnetorte - 4,20 €" },
+                            { "Name": "Frische Cremefrucht - 4,20 €" },
+                            { "Name": "Traditionelles Algarve-Dessert - 4,60 €" },
+                            { "Name": "Obstsalat - 3,30 €" },
+                            { "Name": "Saisonales Obst - 3,30 €" },
+                            { "Name": "Ananas - 4,20 €" }]
+                    },
+                    {
+                        "Title": "Rotwein",
+                        "Speisen": [
+                            { "Name": "Caiado (Alentejo) 37.5cl - 6,00 €" },
+                            { "Name": "Papa Figos (Douro) 37.5cl - 8,50 €" },
+                            { "Name": "Herd. Grous (Alentejo) 37.5cl - 19,50 €" },
+                            { "Name": "Caiado (Alentejo) 75.0cl - 12,00 €" },
+                            { "Name": "Papa Figos (Douro) 75.0cl - 17,50 €" },
+                            { "Name": "Adega Mayor Reserva (Alentejo) 75.0cl - 18,00 €" },
+                            { "Name": "Herdade Coteis (Alentejo) 75.0cl - 14,50 €" },
+                            { "Name": "Herdade Coteis Reserva (Alentejo) 75.0cl - 22,50 €" },
+                            { "Name": "Mingorra (Alentejo) 75.0cl - 18,50 €" },
+                            { "Name": "Galhofa (Douro) 75.0cl - 18,00 €" }]
+                    },
+                    {
+                        "Title": "Weißwein",
+                        "Speisen": [
+                            { "Name": "Caiado (Alentejo) 37.5cl - 6,00 €" },
+                            { "Name": "Planalto (Douro) 37.5cl - 7,00 €" },
+                            { "Name": "Caiado (Alentejo) 75.0cl - 12,00 €" },
+                            { "Name": "Planalto (Douro) 75.0cl - 14,00 €" },
+                            { "Name": "Herd. Grous (Alentejo) 75.0cl - 19,50 €" },
+                            { "Name": "Mingorra (Alentejo) 75.0cl - 18,50 €" },
+                            { "Name": "Galhofa (Douro) 75.0cl - 18,00 €" }]
+                    },
+                    {
+                        "Title": "Grüner Wein",
+                        "Speisen": [
+                            { "Name": "Qta. Aveleda 37.5cl - 7,00 €" },
+                            { "Name": "Casal Garcia 37.5cl - 7,00 €" },
+                            { "Name": "Muralhas 37.5cl - 7,00 €" },
+                            { "Name": "Qta. Aveleda 75.0cl - 14,00 €" },
+                            { "Name": "Casal Garcia 75.0cl - 14,00 €" },
+                            { "Name": "Muralhas 75.0cl - 14,00 €" }]
+                    },
+                    {
+                        "Title": "Roséwein",
+                        "Speisen": [
+                            { "Name": "Mateus 37.5cl - 6,50 €" },
+                            { "Name": "Mateus 75.0cl - 13,00 €" }]
+                    },
+                    {
+                        "Title": "Schaumweine",
+                        "Speisen": [
+                            { "Name": "Brut" },
+                            { "Name": "Süß" },
+                            { "Name": "Trocken" },
+                            { "Name": "Champagner" }]
+                    },
+                    {
+                        "Title": "Hauswein",
+                        "Speisen": [
+                            { "Name": "Krug ¼ Liter - 3,00 €" },
+                            { "Name": "Krug ½ Liter - 4,50 €" },
+                            { "Name": "Krug 1 Liter - 8,50 €" },
+                            { "Name": "Glas - 2,30 €" },
+                            { "Name": "Sangria Krug 1L - 12,50 €" }]
+                    },
+                    {
+                        "Title": "Erfrischungsgetränke",
+                        "Speisen": [
+                            { "Name": "Erfrischungsgetränk - 2,40 €" },
+                            { "Name": "Guaraná - 2,40 €" },
+                            { "Name": "Nektar - 2,40 €" },
+                            { "Name": "Wasser (33cl) - 1,00 €" },
+                            { "Name": "Wasser (50cl) - 1,50 €" },
+                            { "Name": "Sprudelwasser - 1,30 €" }]
+                    },
+                    {
+                        "Title": "Biere",
+                        "Speisen": [
+                            { "Name": "Kleines Bier - 1,60 €" },
+                            { "Name": "Großes Bier - 2,80 €" },
+                            { "Name": "Alkoholfrei - 2,00 €" },
+                            { "Name": "Flasche - 2,00 €" },
+                            { "Name": "Importiertes Bier - 2,40 €" },
+                            { "Name": "Cidre - 2,80 €" }]
+                    },
+
+
+                ],
+                "section-contact": "Kontakt",
+                "contact-text": "Kontaktieren Sie uns für Reservierungen und weitere Informationen. Wir freuen uns darauf, Sie in unserem Restaurant begrüßen zu dürfen und Ihnen ein unvergessliches Hühnererlebnis zu bieten."
+            },
+            "en": {
+                "restaurant-name": "Franguinho de Albufeira",
+                "nav-home": "Home",
+                "nav-menu": "Menu",
+                "nav-contact": "Contact",
+                "section-home": "Welcome",
+                "home-text": "Welcome to Franguinho de Albufeira. We offer a delicious selection of dishes prepared with love and the freshest ingredients. Our menu features a variety of appetizers, meat dishes, sides, and desserts. Complement your meal with a selection of red, white, and rosé wines, as well as refreshing drinks and beers. We look forward to welcoming you to our restaurant and providing you with an unforgettable dining experience.",
+                "section-menu": "Menu",
+                "menu-text": "",
+                "menu": [
+                    {
+                        "Title": "Appetizers",
+                        "Speisen": [
+                            { "Name": "Bread (per person) - €0.80" },
+                            { "Name": "Butter - €0.80" },
+                            { "Name": "Boiled Shrimps (portion) - €12.00" },
+                            { "Name": "Soup of the Day - €2.60" }
+                        ]
+                    },
+                    {
+                        "Title": "Meat",
+                        "Speisen": [
+                            { "Name": "½ Grilled Chicken (with or without Piri-Piri) - €8.00" },
+                            { "Name": "Grilled Chicken (with or without Piri-Piri) - €16.00" },
+                            { "Name": "Grilled Black Pork Filet (Lagartinhos) - €16.00" },
+                            { "Name": "Grilled Beef Steak - €18.00" },
+                            { "Name": "Veal Chop - €24.00" }
+                        ]
+                    },
+                    {
+                        "Title": "Sides",
+                        "Speisen": [
+                            { "Name": "French Fries | EXTRA Small - €3.40" },
+                            { "Name": "French Fries | EXTRA Large - €4.80" },
+                            { "Name": "Rice - €2.20" },
+                            { "Name": "Tomato Salad Small - €3.00" },
+                            { "Name": "Tomato Salad Medium - €4.50" },
+                            { "Name": "Tomato Salad Large - €5.50" }
+                        ]
+                    },
+                    {
+                        "Title": "Desserts",
+                        "Speisen": [
+                            { "Name": "Waffle Cake - €4.20" },
+                            { "Name": "Sweet Rice Pudding - €3.30" },
+                            { "Name": "Condensed Milk Dessert - €3.30" },
+                            { "Name": "Chocolate Mousse - €3.30" },
+                            { "Name": "Cream Cake - €4.20" },
+                            { "Name": "Fresh Cream Fruit - €4.20" },
+                            { "Name": "Traditional Algarve Dessert - €4.60" },
+                            { "Name": "Fruit Salad - €3.30" },
+                            { "Name": "Seasonal Fruit - €3.30" },
+                            { "Name": "Pineapple - €4.20" }
+                        ]
+                    },
+                    {
+                        "Title": "Red Wine",
+                        "Speisen": [
+                            { "Name": "Caiado (Alentejo) 37.5cl - €6.00" },
+                            { "Name": "Papa Figos (Douro) 37.5cl - €8.50" },
+                            { "Name": "Herd. Grous (Alentejo) 37.5cl - €19.50" },
+                            { "Name": "Caiado (Alentejo) 75.0cl - €12.00" },
+                            { "Name": "Papa Figos (Douro) 75.0cl - €17.50" },
+                            { "Name": "Adega Mayor Reserva (Alentejo) 75.0cl - €18.00" },
+                            { "Name": "Herdade Coteis (Alentejo) 75.0cl - €14.50" },
+                            { "Name": "Herdade Coteis Reserva (Alentejo) 75.0cl - €22.50" },
+                            { "Name": "Mingorra (Alentejo) 75.0cl - €18.50" },
+                            { "Name": "Galhofa (Douro) 75.0cl - €18.00" }
+                        ]
+                    },
+                    {
+                        "Title": "White Wine",
+                        "Speisen": [
+                            { "Name": "Caiado (Alentejo) 37.5cl - €6.00" },
+                            { "Name": "Planalto (Douro) 37.5cl - €7.00" },
+                            { "Name": "Caiado (Alentejo) 75.0cl - €12.00" },
+                            { "Name": "Planalto (Douro) 75.0cl - €14.00" },
+                            { "Name": "Herd. Grous (Alentejo) 75.0cl - €19.50" },
+                            { "Name": "Mingorra (Alentejo) 75.0cl - €18.50" },
+                            { "Name": "Galhofa (Douro) 75.0cl - €18.00" }
+                        ]
+                    },
+                    {
+                        "Title": "Green Wine",
+                        "Speisen": [
+                            { "Name": "Qta. Aveleda 37.5cl - €7.00" },
+                            { "Name": "Casal Garcia 37.5cl - €7.00" },
+                            { "Name": "Muralhas 37.5cl - €7.00" },
+                            { "Name": "Qta. Aveleda 75.0cl - €14.00" },
+                            { "Name": "Casal Garcia 75.0cl - €14.00" },
+                            { "Name": "Muralhas 75.0cl - €14.00" }
+                        ]
+                    },
+                    {
+                        "Title": "Rosé Wine",
+                        "Speisen": [
+                            { "Name": "Mateus 37.5cl - €6.50" },
+                            { "Name": "Mateus 75.0cl - €13.00" }
+                        ]
+                    },
+                    {
+                        "Title": "Sparkling Wines",
+                        "Speisen": [
+                            { "Name": "Brut" },
+                            { "Name": "Sweet" },
+                            { "Name": "Dry" },
+                            { "Name": "Champagne" }
+                        ]
+                    },
+                    {
+                        "Title": "House Wine",
+                        "Speisen": [
+                            { "Name": "Pitcher ¼ Liter - €3.00" },
+                            { "Name": "Pitcher ½ Liter - €4.50" },
+                            { "Name": "Pitcher 1 Liter - €8.50" },
+                            { "Name": "Glass - €2.30" },
+                            { "Name": "Sangria Pitcher 1L - €12.50" }
+                        ]
+                    },
+                    {
+                        "Title": "Soft Drinks",
+                        "Speisen": [
+                            { "Name": "Soft Drink - €2.40" },
+                            { "Name": "Guaraná - €2.40" },
+                            { "Name": "Nectar - €2.40" },
+                            { "Name": "Water (33cl) - €1.00" },
+                            { "Name": "Water (50cl) - €1.50" },
+                            { "Name": "Sparkling Water - €1.30" }
+                        ]
+                    },
+                    {
+                        "Title": "Beers",
+                        "Speisen": [
+                            { "Name": "Small Beer - €1.60" },
+                            { "Name": "Large Beer - €2.80" },
+                            { "Name": "Non-Alcoholic - €2.00" },
+                            { "Name": "Bottle - €2.00" },
+                            { "Name": "Imported Beer - €2.40" },
+                            { "Name": "Cider - €2.80" }
+                        ]
+                    }
+                ],
+                "section-contact": "Contact",
+                "contact-text": "Contact us for reservations and more information. We look forward to welcoming you to our restaurant and providing you with an unforgettable chicken experience."
+            },
+            "pt": {
+                "restaurant-name": "Franguinho de Albufeira",
+                "nav-home": "Início",
+                "nav-menu": "Cardápio",
+                "nav-contact": "Contato",
+                "section-home": "Bem-vindo",
+                "home-text": "Bem-vindo ao Franguinho de Albufeira. Oferecemos uma deliciosa seleção de pratos preparados com amor e os ingredientes mais frescos. Nosso cardápio inclui uma variedade de entradas, pratos de carne, acompanhamentos e sobremesas. Complemente sua refeição com uma seleção de vinhos tintos, brancos e rosés, além de bebidas refrescantes e cervejas. Estamos ansiosos para recebê-lo em nosso restaurante e proporcionar-lhe uma experiência gastronômica inesquecível.",
+                "section-menu": "Cardápio",
+                "menu-text": "",
+                "menu": [
+                    {
+                        "Title": "Entradas",
+                        "Speisen": [
+                            { "Name": "Pão (por pessoa) - 0,80 €" },
+                            { "Name": "Manteiga - 0,80 €" },
+                            { "Name": "Camarão Cozido (porção) - 12,00 €" },
+                            { "Name": "Sopa do Dia - 2,60 €" }
+                        ]
+                    },
+                    {
+                        "Title": "Carnes",
+                        "Speisen": [
+                            { "Name": "½ Frango Grelhado (com ou sem Piri-Piri) - 8,00 €" },
+                            { "Name": "Frango Grelhado (com ou sem Piri-Piri) - 16,00 €" },
+                            { "Name": "Filet de Porco Preto Grelhado (Lagartinhos) - 16,00 €" },
+                            { "Name": "Bife de Vaca Grelhado - 18,00 €" },
+                            { "Name": "Costeleta de Vitela - 24,00 €" }
+                        ]
+                    },
+                    {
+                        "Title": "Acompanhamentos",
+                        "Speisen": [
+                            { "Name": "Batatas Fritas | EXTRA Pequena - 3,40 €" },
+                            { "Name": "Batatas Fritas | EXTRA Grande - 4,80 €" },
+                            { "Name": "Arroz - 2,20 €" },
+                            { "Name": "Salada de Tomate Pequena - 3,00 €" },
+                            { "Name": "Salada de Tomate Média - 4,50 €" },
+                            { "Name": "Salada de Tomate Grande - 5,50 €" }
+                        ]
+                    },
+                    {
+                        "Title": "Sobremesas",
+                        "Speisen": [
+                            { "Name": "Bolo de Waffle - 4,20 €" },
+                            { "Name": "Arroz Doce - 3,30 €" },
+                            { "Name": "Sobremesa de Leite Condensado - 3,30 €" },
+                            { "Name": "Mousse de Chocolate - 3,30 €" },
+                            { "Name": "Bolo de Nata - 4,20 €" },
+                            { "Name": "Fruta com Creme Fresco - 4,20 €" },
+                            { "Name": "Sobremesa Tradicional do Algarve - 4,60 €" },
+                            { "Name": "Salada de Frutas - 3,30 €" },
+                            { "Name": "Frutas da Estação - 3,30 €" },
+                            { "Name": "Abacaxi - 4,20 €" }
+                        ]
+                    },
+                    {
+                        "Title": "Vinho Tinto",
+                        "Speisen": [
+                            { "Name": "Caiado (Alentejo) 37.5cl - 6,00 €" },
+                            { "Name": "Papa Figos (Douro) 37.5cl - 8,50 €" },
+                            { "Name": "Herd. Grous (Alentejo) 37.5cl - 19,50 €" },
+                            { "Name": "Caiado (Alentejo) 75.0cl - 12,00 €" },
+                            { "Name": "Papa Figos (Douro) 75.0cl - 17,50 €" },
+                            { "Name": "Adega Mayor Reserva (Alentejo) 75.0cl - 18,00 €" },
+                            { "Name": "Herdade Coteis (Alentejo) 75.0cl - 14,50 €" },
+                            { "Name": "Herdade Coteis Reserva (Alentejo) 75.0cl - 22,50 €" },
+                            { "Name": "Mingorra (Alentejo) 75.0cl - 18,50 €" },
+                            { "Name": "Galhofa (Douro) 75.0cl - 18,00 €" }
+                        ]
+                    },
+                    {
+                        "Title": "Vinho Branco",
+                        "Speisen": [
+                            { "Name": "Caiado (Alentejo) 37.5cl - 6,00 €" },
+                            { "Name": "Planalto (Douro) 37.5cl - 7,00 €" },
+                            { "Name": "Caiado (Alentejo) 75.0cl - 12,00 €" },
+                            { "Name": "Planalto (Douro) 75.0cl - 14,00 €" },
+                            { "Name": "Herd. Grous (Alentejo) 75.0cl - 19,50 €" },
+                            { "Name": "Mingorra (Alentejo) 75.0cl - 18,50 €" },
+                            { "Name": "Galhofa (Douro) 75.0cl - 18,00 €" }
+                        ]
+                    },
+                    {
+                        "Title": "Vinho Verde",
+                        "Speisen": [
+                            { "Name": "Qta. Aveleda 37.5cl - 7,00 €" },
+                            { "Name": "Casal Garcia 37.5cl - 7,00 €" },
+                            { "Name": "Muralhas 37.5cl - 7,00 €" },
+                            { "Name": "Qta. Aveleda 75.0cl - 14,00 €" },
+                            { "Name": "Casal Garcia 75.0cl - 14,00 €" },
+                            { "Name": "Muralhas 75.0cl - 14,00 €" }
+                        ]
+                    },
+                    {
+                        "Title": "Vinho Rosé",
+                        "Speisen": [
+                            { "Name": "Mateus 37.5cl - 6,50 €" },
+                            { "Name": "Mateus 75.0cl - 13,00 €" }
+                        ]
+                    },
+                    {
+                        "Title": "Espumantes",
+                        "Speisen": [
+                            { "Name": "Brut" },
+                            { "Name": "Doce" },
+                            { "Name": "Seco" },
+                            { "Name": "Champanhe" }
+                        ]
+                    },
+                    {
+                        "Title": "Vinho da Casa",
+                        "Speisen": [
+                            { "Name": "Jarro ¼ Litro - 3,00 €" },
+                            { "Name": "Jarro ½ Litro - 4,50 €" },
+                            { "Name": "Jarro 1 Litro - 8,50 €" },
+                            { "Name": "Copo - 2,30 €" },
+                            { "Name": "Sangria Jarro 1L - 12,50 €" }
+                        ]
+                    },
+                    {
+                        "Title": "Refrigerantes",
+                        "Speisen": [
+                            { "Name": "Refrigerante - 2,40 €" },
+                            { "Name": "Guaraná - 2,40 €" },
+                            { "Name": "Nectar - 2,40 €" },
+                            { "Name": "Água (33cl) - 1,00 €" },
+                            { "Name": "Água (50cl) - 1,50 €" },
+                            { "Name": "Água com Gás - 1,30 €" }
+                        ]
+                    },
+                    {
+                        "Title": "Cervejas",
+                        "Speisen": [
+                            { "Name": "Cerveja Pequena - 1,60 €" },
+                            { "Name": "Cerveja Grande - 2,80 €" },
+                            { "Name": "Sem Álcool - 2,00 €" },
+                            { "Name": "Garrafa - 2,00 €" },
+                            { "Name": "Cerveja Importada - 2,40 €" },
+                            { "Name": "Cidra - 2,80 €" }
+                        ]
+                    }
+                ],
+                "section-contact": "Contato",
+                "contact-text": "Entre em contato conosco para reservas e mais informações. Estamos ansiosos para recebê-lo em nosso restaurante e proporcionar-lhe uma experiência de frango inesquecível."
+            },
+            "fr": {
+                "restaurant-name": "Franguinho de Albufeira",
+                "nav-home": "Accueil",
+                "nav-menu": "Menu",
+                "nav-contact": "Contact",
+                "section-home": "Bienvenue",
+                "home-text": "Bienvenue au Franguinho de Albufeira. Nous offrons une délicieuse sélection de plats préparés avec amour et les ingrédients les plus frais. Notre menu propose une variété d'entrées, de plats de viande, d'accompagnements et de desserts. Complétez votre repas avec une sélection de vins rouges, blancs et rosés, ainsi que des boissons rafraîchissantes et des bières. Nous sommes impatients de vous accueillir dans notre restaurant et de vous offrir une expérience culinaire inoubliable.",
+                "section-menu": "Menu",
+                "menu-text": "",
+                "menu": [
+                    {
+                        "Title": "Entrées",
+                        "Speisen": [
+                            { "Name": "Pain (par personne) - 0,80 €" },
+                            { "Name": "Beurre - 0,80 €" },
+                            { "Name": "Crevettes Bouillies (portion) - 12,00 €" },
+                            { "Name": "Soupe du Jour - 2,60 €" }
+                        ]
+                    },
+                    {
+                        "Title": "Viandes",
+                        "Speisen": [
+                            { "Name": "½ Poulet Grillé (avec ou sans Piri-Piri) - 8,00 €" },
+                            { "Name": "Poulet Grillé (avec ou sans Piri-Piri) - 16,00 €" },
+                            { "Name": "Filet de Porc Noir Grillé (Lagartinhos) - 16,00 €" },
+                            { "Name": "Steak de Boeuf Grillé - 18,00 €" },
+                            { "Name": "Côte de Veau - 24,00 €" }
+                        ]
+                    },
+                    {
+                        "Title": "Accompagnements",
+                        "Speisen": [
+                            { "Name": "Frites | EXTRA Petit - 3,40 €" },
+                            { "Name": "Frites | EXTRA Grand - 4,80 €" },
+                            { "Name": "Riz - 2,20 €" },
+                            { "Name": "Salade de Tomates Petit - 3,00 €" },
+                            { "Name": "Salade de Tomates Moyen - 4,50 €" },
+                            { "Name": "Salade de Tomates Grand - 5,50 €" }
+                        ]
+                    },
+                    {
+                        "Title": "Desserts",
+                        "Speisen": [
+                            { "Name": "Gâteau de Gaufre - 4,20 €" },
+                            { "Name": "Riz au Lait - 3,30 €" },
+                            { "Name": "Dessert au Lait Concentré - 3,30 €" },
+                            { "Name": "Mousse au Chocolat - 3,30 €" },
+                            { "Name": "Gâteau à la Crème - 4,20 €" },
+                            { "Name": "Crème de Fruits Frais - 4,20 €" },
+                            { "Name": "Dessert Traditionnel de l'Algarve - 4,60 €" },
+                            { "Name": "Salade de Fruits - 3,30 €" },
+                            { "Name": "Fruits de Saison - 3,30 €" },
+                            { "Name": "Ananas - 4,20 €" }
+                        ]
+                    },
+                    {
+                        "Title": "Vin Rouge",
+                        "Speisen": [
+                            { "Name": "Caiado (Alentejo) 37.5cl - 6,00 €" },
+                            { "Name": "Papa Figos (Douro) 37.5cl - 8,50 €" },
+                            { "Name": "Herd. Grous (Alentejo) 37.5cl - 19,50 €" },
+                            { "Name": "Caiado (Alentejo) 75.0cl - 12,00 €" },
+                            { "Name": "Papa Figos (Douro) 75.0cl - 17,50 €" },
+                            { "Name": "Adega Mayor Reserva (Alentejo) 75.0cl - 18,00 €" },
+                            { "Name": "Herdade Coteis (Alentejo) 75.0cl - 14,50 €" },
+                            { "Name": "Herdade Coteis Reserva (Alentejo) 75.0cl - 22,50 €" },
+                            { "Name": "Mingorra (Alentejo) 75.0cl - 18,50 €" },
+                            { "Name": "Galhofa (Douro) 75.0cl - 18,00 €" }
+                        ]
+                    },
+                    {
+                        "Title": "Vin Blanc",
+                        "Speisen": [
+                            { "Name": "Caiado (Alentejo) 37.5cl - 6,00 €" },
+                            { "Name": "Planalto (Douro) 37.5cl - 7,00 €" },
+                            { "Name": "Caiado (Alentejo) 75.0cl - 12,00 €" },
+                            { "Name": "Planalto (Douro) 75.0cl - 14,00 €" },
+                            { "Name": "Herd. Grous (Alentejo) 75.0cl - 19,50 €" },
+                            { "Name": "Mingorra (Alentejo) 75.0cl - 18,50 €" },
+                            { "Name": "Galhofa (Douro) 75.0cl - 18,00 €" }
+                        ]
+                    },
+                    {
+                        "Title": "Vin Vert",
+                        "Speisen": [
+                            { "Name": "Qta. Aveleda 37.5cl - 7,00 €" },
+                            { "Name": "Casal Garcia 37.5cl - 7,00 €" },
+                            { "Name": "Muralhas 37.5cl - 7,00 €" },
+                            { "Name": "Qta. Aveleda 75.0cl - 14,00 €" },
+                            { "Name": "Casal Garcia 75.0cl - 14,00 €" },
+                            { "Name": "Muralhas 75.0cl - 14,00 €" }
+                        ]
+                    },
+                    {
+                        "Title": "Vin Rosé",
+                        "Speisen": [
+                            { "Name": "Mateus 37.5cl - 6,50 €" },
+                            { "Name": "Mateus 75.0cl - 13,00 €" }
+                        ]
+                    },
+                    {
+                        "Title": "Vins Mousseux",
+                        "Speisen": [
+                            { "Name": "Brut" },
+                            { "Name": "Doux" },
+                            { "Name": "Sec" },
+                            { "Name": "Champagne" }
+                        ]
+                    },
+                    {
+                        "Title": "Vin de la Maison",
+                        "Speisen": [
+                            { "Name": "Carafe ¼ Litre - 3,00 €" },
+                            { "Name": "Carafe ½ Litre - 4,50 €" },
+                            { "Name": "Carafe 1 Litre - 8,50 €" },
+                            { "Name": "Verre - 2,30 €" },
+                            { "Name": "Sangria Carafe 1L - 12,50 €" }
+                        ]
+                    },
+                    {
+                        "Title": "Boissons Gazeuses",
+                        "Speisen": [
+                            { "Name": "Boisson Gazeuse - 2,40 €" },
+                            { "Name": "Guaraná - 2,40 €" },
+                            { "Name": "Nectar - 2,40 €" },
+                            { "Name": "Eau (33cl) - 1,00 €" },
+                            { "Name": "Eau (50cl) - 1,50 €" },
+                            { "Name": "Eau Pétillante - 1,30 €" }
+                        ]
+                    },
+                    {
+                        "Title": "Bières",
+                        "Speisen": [
+                            { "Name": "Petite Bière - 1,60 €" },
+                            { "Name": "Grande Bière - 2,80 €" },
+                            { "Name": "Sans Alcool - 2,00 €" },
+                            { "Name": "Bouteille - 2,00 €" },
+                            { "Name": "Bière Importée - 2,40 €" },
+                            { "Name": "Cidre - 2,80 €" }
+                        ]
+                    }
+                ],
+                "section-contact": "Contact",
+                "contact-text": "Contactez-nous pour les réservations et plus d'informations. Nous nous réjouissons de vous accueillir dans notre restaurant et de vous offrir une expérience de poulet inoubliable."
+            }
+        };
+
+        function changeLanguage(lang) {
+            document.getElementById("restaurant-name").textContent = translations[lang]["restaurant-name"];
+            document.getElementById("nav-home").textContent = translations[lang]["nav-home"];
+            document.getElementById("nav-menu").textContent = translations[lang]["nav-menu"];
+            document.getElementById("nav-contact").textContent = translations[lang]["nav-contact"];
+            document.getElementById("section-home").textContent = translations[lang]["section-home"];
+            document.getElementById("home-text").textContent = translations[lang]["home-text"];
+            document.getElementById("section-menu").textContent = translations[lang]["section-menu"];
+            document.getElementById("menu-text").textContent = translations[lang]["menu-text"];
+            document.getElementById("section-contact").textContent = translations[lang]["section-contact"];
+            document.getElementById("contact-text").textContent = translations[lang]["contact-text"];
+
+
+            const container = document.getElementById("Speisen")
+            container.innerHTML = ""
+            translations[lang]["menu"].forEach(Category => {
+                const header = document.createElement("h2")
+                header.innerText = Category.Title
+                container.appendChild(header)
+                const ul = document.createElement("ul")
+                Category.Speisen.forEach(Speise => {
+                    const li = document.createElement("li")
+                    li.innerText = Speise.Name
+                    ul.append(li)
+                })
+                container.appendChild(ul)
+            });
+
+
+
+        }
+
+        changeLanguage("pt")
+
+
+
+        let currentIndex = 0;
+        const images = document.querySelectorAll('.gallery img');
+        function changeImage() {
+            images[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex + 1) % images.length;
+            images[currentIndex].classList.add('active');
+        }
+        setInterval(changeImage, 20000);     
+    </script>
+</body>
+
+</html>
